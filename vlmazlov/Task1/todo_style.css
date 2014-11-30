@@ -1,0 +1,103 @@
+body {
+
+	margin: 0;
+	border: 0;
+	height: 300px;
+
+	background: beige;
+
+	font-family: "Helvetica" sans-serif;
+}
+
+.mainPart {
+	width: 35%;
+	margin: 40px auto;
+
+	border: 10px;
+	border-radius: 5px;	
+	background: #C0C0C0;
+
+	box-shadow: 10px 10px 5px black;
+	/*background: linear-gradient(to right, gray, white)*/
+}
+
+.header {
+	text-align: center;
+
+	margin-top: 50px;
+
+	border-style: 1px sol;
+	border-color: gray;
+	border: 10px;
+	border-top-right-radius: 5px; 
+	border-top-left-radius: 5px;
+
+	color:  #606060;
+	background-color: #CCCCFF;
+}
+
+form.newTaskForm {
+	text-align: center;
+}
+
+.newTaskFormText {
+	padding-left: 5px;
+	/*margin-left: 20px;*/
+	width: 30%;
+	height: 30px;
+	border-radius: 5px;
+
+	text-align: center;
+	font-size: 100%;
+}
+
+.taskList {
+
+	font-size: 150%;
+}
+	
+.task, .completed-task {
+	font-family: "Times New Roman" sans-serif; 
+	text-decoration: underline;
+	margin-bottom: 20px;
+
+	border-radius: 5px;
+
+	width: 100%;
+}
+
+.completed-task {
+	color: gray;
+	text-decoration: line-through;
+}
+
+
+.task:hover {
+	background: beige;
+}
+
+.completeAll {
+	display: inline-block;
+	margin-left: 4%;
+	
+	background:	transparent;	
+	border: none;
+	
+	font-size: 150%;
+}
+
+.completeAll:hover {
+	background: white;
+}
+
+.tasksLeft {
+
+	display: inline-block;
+	margin-left: 15px;
+	/*width: 100px;*/
+
+	/*text-align: left;*/
+	/*background:	#CCFFE5;*/
+	
+	font-size: 150%;
+}

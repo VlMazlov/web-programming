@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    </head>
+    <body>
+        <div id="tasker">
+            <div id="header">
+                <div class="depth" title="Tasker">Tasker</div>
+            </div>
+
+            <form id="form" class="pure-form">
+                <fieldset>
+                    <div class="pure-u-3-4">
+                        <input id="new-task" class="pure-input-1" type="text" placeholder="What to do?" />
+                    </div>
+                    <input id="add-button" type="submit" value="Add" class="pure-button" />
+                </fieldset>
+            </form>
+
+            <div id="task-list">
+            </div>
+       
+            <table>
+                <tr>
+                    <td>
+                        <button class="pure-button pure-button-primary mark-button">Mark all as completed</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <button class="pure-button pure-button-primary delete-button">Delete all completed</button>
+                    </td>    
+                </tr>
+            </table>
+            <footer>0 tasks to do</footer>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
