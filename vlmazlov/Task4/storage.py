@@ -10,15 +10,14 @@ RECENT_ENTRIES_ENCODING = 'utf-8'
 RECENT_ENTRIES_NUM = 10
 
 def load_file_content(filename, encoding):
-    with open(filename, 'r', encoding=encoding) as file:
+    import os
+
+    with open(os.path.join(os.getcwd(), filename), 'r', encoding=encoding) as file:
         return eval(file.read())
 
 
 def save_to_file(to_save, filename, encoding):
-
-    import os
-    
-    with open(os.path.join(os.getcwd(), filename), 'w', encoding=encoding) as file:
+    with open(filename, 'w', encoding=encoding) as file:
         print(repr(to_save), file=file)
 
 
