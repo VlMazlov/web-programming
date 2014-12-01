@@ -15,8 +15,8 @@ def load_file_content(filename, encoding):
 
 
 def save_to_file(to_save, filename, encoding):
-    with open(filename, 'w', encoding=encoding) as file:
-        print(repr(to_save), file=file)
+    with open(filename, 'w', encoding=encoding) as file_written:
+        print(repr(to_save), file=file_written)
 
 
 def load_storage():
