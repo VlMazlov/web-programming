@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Please enter the URL to shorten:</h2>
+
+    <form method="post" action="{{ url_for('shorten_url') }}" class="pure-form form-inline">
+        <label>
+            <input type="text" name="long_url" placeholder="http://">
+        </label>
+
+        <input type="text" name="short_url">
+
+        <br>
+        <input type="submit" value="Shorten!" class="btn btn-primary">
+    </form>
+
+    <br>
+
+    {% if recent_entries %}
+        <table class="pure-table">
+
+             <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Original URL</th>
+                    <th>Shortened URL</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for entry in recent_entries %}
+                    <tr>
+                        <th>{{ loop.index }}</th>
+                        <th>http://{{ entry.long_url_truncated }}</th>
+                        <th>
+                            <a href="http://{{ entry.long_url }}">{{ url_for('display_home', _external=True) + entry.short_url }}</a>
+                        </th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

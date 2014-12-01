@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="col-md-12">
+        <h1>Your short URL for {{ entry.long_url_truncated }}:</h1>
+
+    <div class="col-md-6 col-md-offset-3">
+        <a class="btn btn-link" href="http://{{ entry.long_url }}">{{ url_for('display_home', _external=True) + entry.short_url }}</a>
+
+            <hr>
+
+        <a class="btn btn-success" href="/">Shorten another one!</a>
+    </div>
+{% endblock %}
